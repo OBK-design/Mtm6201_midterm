@@ -1,0 +1,230 @@
+/* AI USE - file organization
+   PROMPT: "add each setion on its own so the code is easy to read and to go to each
+   section"
+   WHAT CLAUDE DID: moved my existing rules into labelled sections and split my two
+   shared media queries so each section has its own @media blocks under it. No new
+   styles were added in this step.
+   MY INTENT: ________ */
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gold: #d69e3d;
+  --gold-dark: #966f2c;
+  --background: #f3f0e9;
+
+  --font-heading: "Lato", sans-serif;
+  --font-body: "Karla", sans-serif;
+}
+
+/* =========================================================
+   BASE / RESET
+   ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--black);
+  background-color: var(--background);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.027rem;
+}
+
+h2 {
+  font-size: 1.802rem;
+}
+
+h3 {
+  font-size: 1.424rem;
+}
+
+/* fonts for tablet */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.986rem;
+  }
+
+  h2 {
+    font-size: 2.488rem;
+  }
+
+  h3 {
+    font-size: 1.728rem;
+  }
+}
+
+/* fonts for desktop */
+@media (min-width: 1100px) {
+  h1 {
+    font-size: 3.815rem;
+  }
+
+  h2 {
+    font-size: 3.052rem;
+  }
+
+  h3 {
+    font-size: 1.953rem;
+  }
+}
+
+/* =========================================================
+   WRAPPER
+   ========================================================= */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* =========================================================
+   SKIP LINK
+   ========================================================= */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.site-header {
+  background-color: var(--black);
+  padding: 1rem 0;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 160px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+}
+
+/* =========================================================
+   NAV
+   ========================================================= */
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+/* Nav list setup for hover and active states */
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--gold);
+}
+
+.nav-list a:active {
+  color: var(--gold-dark);
+}
+
+/* nav for tablet */
+@media (min-width: 768px) {
+  .nav-list {
+    gap: 2rem;
+  }
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+/* =========================================================
+   WELCOME / GALLERY
+   ========================================================= */
+
+/* =========================================================
+   OFFER
+   ========================================================= */
+
+/* =========================================================
+   CTA (MENU + LOCATIONS)
+   ========================================================= */
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
