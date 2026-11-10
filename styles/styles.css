@@ -592,7 +592,86 @@ h3 {
 /* =========================================================
    TESTIMONIALS
    ========================================================= */
+/* AI USE PROMPT: "create a 3 col section, with heading similar in welcome section and 3 picture in each col, with its text in white and name of costumer in gold, and the full black background for the section"
+   WHAT CLAUDE DID: black section background with white text, the same 2-line h2
+   width as the welcome section heading, a CSS grid for the 3 columns, white quote text and gold customer names*/
 
+.testimonials {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 4rem 0;
+}
+
+.testimonials h2 {
+  max-width: 13em;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.testimonial {
+  position: relative;
+  margin: 0;
+}
+
+.testimonial img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.testimonial figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 4rem 1rem 1rem;
+  /* black gradient behind them so the
+   white text stays readable*/
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+}
+
+.testimonial blockquote {
+  margin: 0 0 0.5rem;
+}
+
+.testimonial blockquote p {
+  margin: 0;
+}
+
+.testimonial-name {
+  margin: 0;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .testimonials {
+    padding: 6rem 0;
+  }
+
+  .testimonial-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonial blockquote p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .testimonial-list {
+    gap: 1.25rem;
+  }
+
+  .testimonial figcaption {
+    padding: 5rem 1.5rem 1.5rem;
+  }
+}
 /* =========================================================
    FOOTER
    ========================================================= */
