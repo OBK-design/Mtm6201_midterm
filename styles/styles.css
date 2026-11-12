@@ -199,10 +199,12 @@ h3 {
 /* =========================================================
                             BUTTONS
    ========================================================= */
+
 /* AI USE - base button + light button
    PROMPT: "Add a white background button with black text, on hover change color to gold background and
    white text with 2px white stroke and ease the transition" (part of my hero prompt, see HERO)
    WHAT CLAUDE DID: wrote .btn (shared padding, Karla font, uppercase, transparent 2px border, transition) and .btn-light with hover/focus-visible states from my spec */
+   
 .btn {
   display: inline-block;
   padding: 0.75rem 1.75rem;
@@ -290,13 +292,12 @@ h3 {
    PROMPT 1: "the hero image will be a background image for the hero section, with the
    H1 and text and button alliging to the center; button will be white background with
    black text, and on hover gold bg and white text with white stroke"
+ WHAT CLAUDE DID: wrote the hero background (60% black gradient over    the photo,cover), the flex column that centers h1/p/button, and the padding / min-height at each breakpoint.
 
-   WHAT CLAUDE DID: wrote the hero background (60% black gradient over    the photo,cover), the flex column that centers h1/p/button, and the padding / min-height at each breakpoint.
-
+        ----------------------------------
 
    PROMPT 2: "adjust the picture for the hero to recenter by ussing padding top"
-
-   WHAT CLAUDE DID: used background-position: center 35% instead of padding-top,because padding does not move a background image.
+WHAT CLAUDE DID: used background-position: center 35% instead of padding-top,because padding does not move a background image.
 */
 .hero {
   background-image:
@@ -340,7 +341,7 @@ h3 {
 }
 
 /* =========================================================
-   EYEBROW
+                           EYEBROW
    ========================================================= */
 
 /* .eyebrow written by Claude from my gallery prompt
@@ -353,7 +354,7 @@ h3 {
 }
 
 /* =========================================================
-   WELCOME / GALLERY
+                         WELCOME / GALLERY
    ========================================================= */
 
 /* AI USE - welcome section + gallery
@@ -474,7 +475,7 @@ h3 {
   }
 }
 /* =========================================================
-   CTA (MENU + LOCATIONS)
+                 CTA (MENU + LOCATIONS)
    ========================================================= */
 /* AI USE : menu + locations section
    WHAT CLAUDE DID: added the coffee-shop.jpeg background with the same dark overlay technique as the hero, white centered text, and a CSS grid for the two columns.The menu button reuses .btn-light (already styled in the hero step) and the locations button uses the new .btn-outline */
@@ -526,8 +527,9 @@ h3 {
   }
 }
 /* =========================================================
-   ABOUT
+                           ABOUT
    ========================================================= */
+
 /* AI USE PROMPT: "for our story section, we have the picture on the left and the content on the right; like two Col with the black button and gold hover on it"
  WHAT CLAUDE DID: CSS grid with the image in the left column and the text in the right column then the text vertically centered next to the image. The eyebrow + h2 reuse the same styles as the welcome section. The button uses the new .btn-dark in button section*/
 .about {
@@ -610,8 +612,7 @@ h3 {
   right: 0;
   bottom: 0;
   padding: 4rem 1rem 1rem;
-  /* black gradient behind them so the
-   white text stays readable*/
+  /* black gradient behind the caption so the white text stays readable*/
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
 }
 
@@ -652,9 +653,13 @@ h3 {
     padding: 5rem 1.5rem 1.5rem;
   }
 }
+
+
 /* =========================================================
-   FOOTER
+                            FOOTER
    ========================================================= */
+
+
 .site-footer {
   background-color: var(--black);
   color: var(--white);
