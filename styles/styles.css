@@ -4,7 +4,7 @@
    WHAT CLAUDE DID: moved my existing rules into labelled sections and split my two
    shared media queries so each section has its own @media blocks under it. No new
    styles were added in this step.
-   MY INTENT: ________ */
+   MY INTENT: Was to create a file structure to follow along on each style am adding and to have a proper developer code */
 
 /* =========================================================
                             VARIABLES
@@ -124,6 +124,7 @@ h3 {
                             HEADER
    ========================================================= */
 .site-header {
+  /*vars are added in root as refrences so the colors stays on brand*/
   background-color: var(--black);
   padding: 1rem 0;
 }
@@ -201,9 +202,7 @@ h3 {
 /* AI USE - base button + light button
    PROMPT: "Add a white background button with black text, on hover change color to gold background and
    white text with 2px white stroke and ease the transition" (part of my hero prompt, see HERO)
-   WHAT CLAUDE DID: wrote .btn (shared padding, Karla font, uppercase, transparent
-   2px border, transition) and .btn-light with hover/focus-visible states from my spec.
-*/
+   WHAT CLAUDE DID: wrote .btn (shared padding, Karla font, uppercase, transparent 2px border, transition) and .btn-light with hover/focus-visible states from my spec */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.75rem;
@@ -258,7 +257,7 @@ h3 {
   border-color: var(--background);
 }
 
-/* dark button */
+/* dark button and hover effect*/
 .btn-dark {
   background-color: var(--black);
   color: var(--white);
@@ -291,15 +290,13 @@ h3 {
    PROMPT 1: "the hero image will be a background image for the hero section, with the
    H1 and text and button alliging to the center; button will be white background with
    black text, and on hover gold bg and white text with white stroke"
-   WHAT CLAUDE DID: wrote the hero background (60% black gradient over the photo,
-   cover), the flex column that centers h1/p/button, and the padding / min-height
-   at each breakpoint.
+
+   WHAT CLAUDE DID: wrote the hero background (60% black gradient over    the photo,cover), the flex column that centers h1/p/button, and the padding / min-height at each breakpoint.
 
 
-   PROMPT 2: "adjust the picture for the hero to be on have the girl eye level in the
-   middle by adding a padding top"
-   WHAT CLAUDE DID: used background-position: center 35% instead of padding-top,
-   because padding does not move a background image.
+   PROMPT 2: "adjust the picture for the hero to recenter by ussing padding top"
+
+   WHAT CLAUDE DID: used background-position: center 35% instead of padding-top,because padding does not move a background image.
 */
 .hero {
   background-image:
@@ -358,18 +355,13 @@ h3 {
 /* =========================================================
    WELCOME / GALLERY
    ========================================================= */
+
 /* AI USE - welcome section + gallery
    PROMPT: "the next section is the galery, i need the welcome text to be a small
     eyebrow heading on top of the big text heading for experience a new way,after that comes the pictures
    that will be in a two col one picture in the left col and 4 pictures in the right col in
    a grid pattern 2 on top and 2 on the botom"
-   WHAT CLAUDE DID: wrote the section padding, the h2 max-width (13em) for the 2-line
-   break, and the CSS grid (2fr 1fr 1fr, main image spanning 2 rows, square images
-   with object-fit: cover).
-  
-   on mobile the big image is full width with the 4 small ones
-   in a 2x2 grid under it (matching the mobile mockup); the two-column layout starts
-   at 768px.*/
+   WHAT CLAUDE DID: wrote the section padding, the h2 max-width (13em) for the 2-line break, and the CSS grid (2fr 1fr 1fr, main image spanning 2 rows, square images with object-fit: cover; on mobile the big image is full width with the 4 small ones in a 2x2 grid under it (matching the mobile mockup); the two-column layout starts at 768px.*/
 .welcome {
   padding: 4rem 0;
 }
@@ -420,11 +412,7 @@ h3 {
 /* =========================================================
                              OFFER
    ========================================================= */
-/*centered the section text, removed the default list styles from the <ul>, 
-    and used flexbox with wrap so the three items sit in columns, each with its icon centered above its h3 and paragraph.
-   mobile is 1 column, tablet is 2 on top + 1 centered underneath, and desktopis the 3 columns.
-   Smaller top padding than the welcome section so the gap between the two
-   sections is not doubled; Icon sizes per breakpoint*/
+/*centered the section text, removed the default list styles from the <ul>, and used flexbox with wrap so the three items sit in columns, each with its icon centered above its h3 and paragraph. mobile is 1 column, tablet is 2 on top + 1 centered underneath, and desktopis the 3 columns. Smaller top padding than the welcome section so the gap between the two sections is not doubled; Icon sizes per breakpoint*/
 .offer {
   padding: 1rem 0 4rem;
   text-align: center;
@@ -489,11 +477,7 @@ h3 {
    CTA (MENU + LOCATIONS)
    ========================================================= */
 /* AI USE : menu + locations section
-
-   WHAT CLAUDE DID: added the coffee-shop.jpeg background with the same dark overlay
-   technique as the hero, white centered text, and a CSS grid for the two columns.
-   The menu button reuses .btn-light (already styled in the hero step)
-   and the locations button uses the new .btn-outline */
+   WHAT CLAUDE DID: added the coffee-shop.jpeg background with the same dark overlay technique as the hero, white centered text, and a CSS grid for the two columns.The menu button reuses .btn-light (already styled in the hero step) and the locations button uses the new .btn-outline */
 .cta {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -544,11 +528,8 @@ h3 {
 /* =========================================================
    ABOUT
    ========================================================= */
-/* AI USE PROMPT: "for our story section, we have the picture on the left and the content on
-   the right; like two Col with the black button and gold hover on it"
-   WHAT CLAUDE DID: CSS grid with the image in the left column and the text in the
-   right column then the text vertically centered next to the image. The eyebrow + h2 reuse
-   the same styles as the welcome section. The button uses the new .btn-dark in button section*/
+/* AI USE PROMPT: "for our story section, we have the picture on the left and the content on the right; like two Col with the black button and gold hover on it"
+ WHAT CLAUDE DID: CSS grid with the image in the left column and the text in the right column then the text vertically centered next to the image. The eyebrow + h2 reuse the same styles as the welcome section. The button uses the new .btn-dark in button section*/
 .about {
   padding: 4rem 0;
 }
@@ -593,8 +574,7 @@ h3 {
    TESTIMONIALS
    ========================================================= */
 /* AI USE PROMPT: "create a 3 col section, with heading similar in welcome section and 3 picture in each col, with its text in white and name of costumer in gold, and the full black background for the section"
-   WHAT CLAUDE DID: black section background with white text, the same 2-line h2
-   width as the welcome section heading, a CSS grid for the 3 columns, white quote text and gold customer names*/
+   WHAT CLAUDE DID: black section background with white text, the same 2-line h2 width as the welcome section heading, a CSS grid for the 3 columns, white quote text and gold customer names*/
 
 .testimonials {
   background-color: var(--black);
